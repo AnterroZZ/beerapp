@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">Twoje Piwo</string>
+    <string name="main_activity_button_text">Piwko wyjebane</string>
+    <string name="main_drank_today">Wypite Dzisiaj:</string>
+    <string name="main_drank_now">Ilość promili teraz:</string>
+    <string name="profile_beer_progress">Postęp z piwami</string>
+    <string name="profile_menu_settings">Settings</string>
+    <string name="profile_total_number_beers">łączna ilość piw</string>
+    <string name="profile_level">twój poziom</string>
+    <string name="profile_title_default">Nowicjusz</string>
+
+    <!--    PreferenceFragment Strings-->
+
+    <!--    Account PreferenceFragment Strings-->
+    <string name="settings_account">Konto</string>
+    <string name="settings_photo">Zmień zdjęcie</string>
+    <string name="settings_title">Zmień tytuł</string>
+    <string name="settings_title_summary">Kliknij aby zmienić swój tytuł</string>
+    <string name="settings_password">Zmień hasło</string>
+    <string name="settings_password_summary">Kliknij aby zmienić hasło</string>
+    <string name="settings_wage">Zmień swoją wage</string>
+    <string name="settings_wage_summary">Twoja aktualna waga (kg): </string>
+    <string name="settings_height">Zmień swój wzrost</string>
+    <string name="settings_height_summary">Twój aktualny wzrost (cm): </string>
+
+    <!--    Notifications PreferenceFragment Strings-->
+    <string name="settings_notifications">Notyfikacje</string>
+    <string name="settings_send_notifcations">Wysyłaj wszystkie notyfikacje</string>
+    <string name="settings_daily_notifications">Notyfikacje z dziennym piwem</string>
+
+    <!--    Applications PreferenceFragment Strings-->
+    <string name="settings_aplications">Aplikacja</string>
+    <string name="settings_help">Pomoc</string>
+    <string name="settings_about">O nas</string>
+    <string name="settings_log_out">Wyloguj się</string>
+    <string name="settings_delete_account">Rzuć alkoholizm</string>
+    <string name="profile_all_statistics">Zobacz pełne statystyki</string>
+
+
+    <!--    Statistics Activity Strings-->
+    <string name="stat_level">Poziom</string>
+    <string name="stat_favourite_beer">Ulubione piwo</string>
+    <string name="stat_calories_today">Kalorie dzisiaj</string>
+    <string name="stat_calories_total">Całkowite kalorie</string>
+    <string name="stat_drank_today">Ilość dziś wypitych piw</string>
+    <string name="stat_drank_week">Ilość piw wypitych w tym tyg</string>
+    <string name="stat_drank_total">Całkowita ilość wypitych piw</string>
+    <string name="stat_pure_alcohol">Ilość przyjętego czystego alkoholu</string>
+    <string name="stat_date_of_creation">Data utworzenia konta</string>
+    <string name="stat_favourite_type">Ulubiono forma</string>
+    <string name="add_add_beer">Dodaj piwko</string>
+    <string name="main_beer_day_label">Piwo twojego dnia:</string>
+
+
+    <!--    Registration Activity Strings-->
+    <string name="reg_tv_hello">Witaj!</string>
+    <string name="reg_tv_create_your_account">Załóż swoje konto</string>
+    <string name="reg_hint_email_address">Adres email</string>
+    <string name="reg_hint_password_confirm">Potwierdź hasło</string>
+    <string name="reg_hint_password">Hasło</string>
+    <string name="reg_hint_username">Nazwa użytkownika</string>
+    <string name="reg_hint_age">Wiek</string>
+    <string name="reg_hint_height">Wzrost</string>
+    <string name="reg_hint_weight">Waga</string>
+    <string name="reg_hint_sex">Płeć</string>
+    <string name="reg_button_register">Zarejestruj się</string>
+    <string name="reg_tv_got_an_account">Masz już konto?</string>
+    <string name="reg_tv_login">Zaloguj się!</string>
+    <string name="reg_toast_length">Twoje hasło musi mieć conajmniej 8 znaków</string>
+    <string name="reg_toast_number">Twoje hasło musi zawierać jakąś liczbe</string>
+    <string name="reg_toast_matches">Twoje hasła muszą się zgadzać</string>
+    <string name="reg_toast_wrong_email">Ten email juz ktoś zużył lub wpisałeś błędny email</string>
+    <string-array name="reg_sex">
+        <item>Mężczyzna</item>
+        <item>Kobieta</item>
+    </string-array>
+
+    <!--    Login Activity Strings-->
+    <string name="log_tv_title_one">Dziennik</string>
+    <string name="log_tv_title_two">Piwosza</string>
+    <string name="log_hint_email">Adres email</string>
+    <string name="log_hint_password">Hasło</string>
+    <string name="log_button_login">Zaloguj się</string>
+    <string name="log_tv_no_account">Brak konta?</string>
+    <string name="log_tv_register">Zarejestruj się!</string>
+    <string name="log_progress_bar">Logowanie...</string>
+
+<!--    Daily Beer Strings-->
+    <string name="daily_notification_title">Twoje piwo dnia to:</string>
+    <string name="daily_notification_body">Już po 15, czas abys poznał swoje piwo dnia ;)</string>
+    <string name="daily_notification_reminder">Od teraz będziesz otrzymywał powiadomienia o nowym dziennym piwie!</string>
+
+
+    <string-array name="amount_drank">
+        <item>300</item>
+        <item>500</item>
+    </string-array>
+
+    <string-array name="beers">
+        <item>Harnold</item>
+        <item>Tatra</item>
+        <item>Perla</item>
+    </string-array>
+</resources>

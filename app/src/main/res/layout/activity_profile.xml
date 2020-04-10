@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp"
+        app:title="Your profile"
+        app:titleTextColor="@color/colorSecondary" />
+
+    <!--        Profile, followers,following following-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:onClick="goToMain"
+            android:id="@+id/profile_iv_profile_photo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/image_placeholder" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/profile_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebas_neue_bold"
+                android:textColor="@color/colorSecondary"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="SHOGUN" />
+
+            <TextView
+                android:id="@+id/profile_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebas_neue_book"
+                android:textColor="@color/colorSecondary"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_tv_name"
+                tools:text="Król gór" />
+
+            <TextView
+                android:id="@+id/profile_tv_followers_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:onClick="goToFollowers"
+                android:textColor="@color/colorSecondary"
+                android:textSize="40sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/profile_tv_following_number"
+                app:layout_constraintTop_toBottomOf="@+id/profile_tv_title"
+                tools:text="6" />
+
+            <TextView
+                android:id="@+id/profile_tv_followers_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebas_neue_book"
+                android:onClick="goToFollowers"
+                android:text="Obserwujący"
+                android:textColor="@color/colorSecondary"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/profile_tv_followers_number"
+                app:layout_constraintStart_toStartOf="@+id/profile_tv_followers_number"
+                app:layout_constraintTop_toBottomOf="@id/profile_tv_followers_number"
+
+                />
+
+            <TextView
+                android:id="@+id/profile_tv_following_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:onClick="goToFollowing"
+                android:textColor="@color/colorSecondary"
+                android:textSize="40sp"
+                app:layout_constraintLeft_toRightOf="@id/profile_tv_followers_number"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_tv_title"
+                tools:text="9" />
+
+            <TextView
+                android:id="@+id/profile_tv_following_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebas_neue_book"
+                android:onClick="goToFollowing"
+                android:text="Obserwowani"
+                android:textColor="@color/colorSecondary"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/profile_tv_following_number"
+                app:layout_constraintStart_toStartOf="@+id/profile_tv_following_number"
+                app:layout_constraintTop_toBottomOf="@id/profile_tv_following_number" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark" />
+    <!--    Your Stats-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/main_button"
+        android:elevation="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/bebas_neue_regular"
+            android:text="Twoje statystyki"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark" />
+
+<!--        Basic stats-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/profile_tv_total_number_beers_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:text="@string/profile_total_number_beers"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/profile_tv_level_label" />
+
+            <TextView
+                android:id="@+id/profile_tv_total_number_beers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebas_neue_bold"
+                tools:text="256"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@id/profile_tv_total_number_beers_label"
+                app:layout_constraintEnd_toEndOf="@+id/profile_tv_total_number_beers_label"
+                app:layout_constraintStart_toStartOf="@+id/profile_tv_total_number_beers_label" />
+
+            <TextView
+                android:id="@+id/profile_tv_level_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:text="@string/profile_level"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/profile_tv_total_number_beers_label"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/profile_tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebas_neue_bold"
+                tools:text="16"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@id/profile_tv_level_label"
+                app:layout_constraintEnd_toEndOf="@+id/profile_tv_level_label"
+                app:layout_constraintStart_toStartOf="@+id/profile_tv_level_label" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/bebas_neue_book"
+            android:onClick="seeAllStatistics"
+            android:text="@string/profile_all_statistics"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/profile_tv_beer_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:text="@string/profile_beer_progress"
+        android:textColor="@color/colorSecondary"
+        android:textSize="40sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profile_rv_beers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/single_beer_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:textColor="@color/colorSecondary"
+        tools:text="6%"
+        android:background="@drawable/image_placeholder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="16dp"/>
+
+    <TextView
+        android:layout_margin="8dp"
+        android:id="@+id/single_beer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:textColor="@color/colorSecondary"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/single_beer_image_view"
+        app:layout_constraintStart_toEndOf="@+id/single_beer_image_view"
+        app:layout_constraintTop_toTopOf="@+id/single_beer_image_view"
+        tools:text="Harnold" />
+
+    <TextView
+        android:id="@+id/single_beer_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:textColor="@color/colorSecondary"
+        android:textSize="28sp"
+        tools:text="2"
+        android:layout_margin="8dp"
+        app:layout_constraintRight_toLeftOf="@id/single_beer_level_label"
+        app:layout_constraintTop_toTopOf="@id/single_beer_image_view"
+        app:layout_constraintBottom_toBottomOf="@id/single_beer_image_view"/>
+    <TextView
+        android:id="@+id/single_beer_level_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:textColor="@color/colorSecondary"
+        android:textSize="28sp"
+        tools:text="LVL"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/single_beer_image_view"
+        app:layout_constraintBottom_toBottomOf="@id/single_beer_image_view"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@id/single_beer_image_view"
+        app:layout_constraintLeft_toRightOf="@id/single_beer_image_view"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

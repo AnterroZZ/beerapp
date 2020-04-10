@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "588199582796",
+    "firebase_url": "https://twoje-piwo.firebaseio.com",
+    "project_id": "twoje-piwo",
+    "storage_bucket": "twoje-piwo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588199582796:android:ae4745882520b36fb1a8e9",
+        "android_client_info": {
+          "package_name": "com.example.twojepiwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588199582796-04iqntm5bu5d1btjnab5plep7f5n95pl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.twojepiwo",
+            "certificate_hash": "551df465d486f0934802a5b834ac78f377d56b3a"
+          }
+        },
+        {
+          "client_id": "588199582796-l18bqh688mad85e4ps8nr94fllvgbrq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL2ZAWcL6Jf5ssB7hFB8gyjTDVNnlsoxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588199582796-l18bqh688mad85e4ps8nr94fllvgbrq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
