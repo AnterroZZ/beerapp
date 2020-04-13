@@ -8,16 +8,21 @@
         android:title="@string/settings_account">
         <Preference
             android:key="photo"
-            android:title="@string/settings_photo" />
+            android:title="@string/settings_photo"
+            android:summary="@string/settings_photo_summary"
+            />
         <Preference
             android:key="title"
             android:summary="@string/settings_title_summary"
             android:title="@string/settings_title" />
-        <EditTextPreference
+        <com.example.twojepiwo.ChangePasswordPreference
             android:dialogTitle="@string/settings_password"
             android:key="password"
             android:summary="@string/settings_password_summary"
             android:title="@string/settings_password"
+            android:dialogMessage="Are you sure you wish to reset your quest progress? This action cannot be undone!"
+            android:positiveButtonText="Zmień hasło"
+            android:negativeButtonText="Anuluj"
             />
         <EditTextPreference
             android:dialogTitle="@string/settings_wage"

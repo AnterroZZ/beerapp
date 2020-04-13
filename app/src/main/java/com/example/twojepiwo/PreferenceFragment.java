@@ -1,6 +1,7 @@
 package com.example.twojepiwo;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 import androidx.preference.EditTextPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
@@ -17,20 +19,30 @@ import androidx.preference.SwitchPreference;
 
 import com.example.twojepiwo.LoginRegister.LoginActivity;
 import com.example.twojepiwo.Receivers.DailyBeerNotificationReceiver;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import android.content.ClipboardManager;
 
 import java.util.Calendar;
 
 public class PreferenceFragment extends PreferenceFragmentCompat{
 
     private  Preference mLogOut;
-    private EditTextPreference mPassword;
     private EditTextPreference mWeight;
     private EditTextPreference mHeight;
     private SwitchPreference mDailyNotification;
+
+    private Preference mHelp;
+    private Preference mAbout;
+    private Preference mPhoto;
+    private Preference mTitle;
 
     SharedPreferences mainSharedPreferences;
     private SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener;
@@ -55,9 +67,14 @@ public class PreferenceFragment extends PreferenceFragmentCompat{
         mainSharedPreferences = getActivity().getSharedPreferences(LoginActivity.SHARED_PREFERENCES,Context.MODE_PRIVATE);
         mHeight = findPreference("height");
         mLogOut = findPreference("log_out");
-        mPassword = findPreference("password");
         mWeight = findPreference("weight");
         mDailyNotification = findPreference("daily_notifications");
+
+        mHelp = findPreference("help");
+        mAbout = findPreference("about");
+
+        mPhoto = findPreference("photo");
+        mTitle = findPreference("title");
 
 
         mHeight.setOnBindEditTextListener(new EditTextPreference.OnBindEditTextListener() {
@@ -104,8 +121,47 @@ public class PreferenceFragment extends PreferenceFragmentCompat{
         };
 
 
-        setLogout();
+        //TODO: Delete after implementing
+        setDummy(mPhoto, "Implemented in future");
+        setDummy(mTitle, "Implemented in future");
 
+        setHelpAbout();
+        setLogout();
+    }
+
+    private void setDummy(Preference preference, final String message) {
+        preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Toast.makeText(getContext(),message, Toast.LENGTH_LONG).show();
+                return true;
+            }
+        });
+    }
+
+    private void setHelpAbout() {
+        final String link = "https://github.com/AnterroZZ/beerapp";
+        mHelp.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Toast.makeText(getContext(),"Aby dowiedzieć się więcej zajrzyj do dokumentacji," +
+                        " pozwoliłem sobie skopiować link do schowka :)", Toast.LENGTH_LONG).show();
+                ClipboardManager clipboard = (ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("Github", link);
+                clipboard.setPrimaryClip(clip);
+                return true;
+            }
+
+
+        });
+
+        mAbout.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Toast.makeText(getContext(),"Odwiedź mojego GitHuba aby dowiedzieć się więcej!", Toast.LENGTH_LONG).show();
+                return true;
+            }
+        });
     }
 
     private void setWeight(SharedPreferences sharedPreferences, String key) {
@@ -185,5 +241,21 @@ public class PreferenceFragment extends PreferenceFragmentCompat{
         super.onPause();
 
         getPreferenceScreen().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(preferenceChangeListener);
+    }
+
+    @Override
+    public void onDisplayPreferenceDialog(Preference preference) {
+        DialogFragment dialogFragment =null;
+        if (preference instanceof ChangePasswordPreference) {
+            dialogFragment = ChangePasswordDialogFragmentCompat.newInstance(preference.getKey());
+        }
+        if(dialogFragment != null)
+        {
+            dialogFragment.setTargetFragment(this,0);
+            dialogFragment.show(this.getFragmentManager(), "android.support.v7.preference" +
+                    ".PreferenceFragment.DIALOG");
+        }
+
+        else super.onDisplayPreferenceDialog(preference);
     }
 }

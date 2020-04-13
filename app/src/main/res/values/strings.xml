@@ -14,6 +14,7 @@
     <!--    Account PreferenceFragment Strings-->
     <string name="settings_account">Konto</string>
     <string name="settings_photo">Zmień zdjęcie</string>
+    <string name="settings_photo_summary">Kliknij aby zmienić swój zdjęcie</string>
     <string name="settings_title">Zmień tytuł</string>
     <string name="settings_title_summary">Kliknij aby zmienić swój tytuł</string>
     <string name="settings_password">Zmień hasło</string>
