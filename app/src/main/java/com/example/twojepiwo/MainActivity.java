@@ -69,4 +69,9 @@ public class MainActivity extends AppCompatActivity {
                 mAmountDrankToday.setText(String.valueOf(drankToday));
             }
     }
+
+    public void goToProfile(View view) {
+        Intent profleIntent = new Intent(this, ProfileActivity.class);
+        startActivity(profleIntent);
+    }
 }

@@ -1,6 +1,7 @@
 package com.example.twojepiwo;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -148,7 +149,4 @@ public class ProfileActivity extends AppCompatActivity implements ProfileBeersAd
 //        startActivity(seeBeerProgress);
     }
 
-    public void goToMain(View view) {
-        startActivity(new Intent(this,MainActivity.class));
-    }
 }

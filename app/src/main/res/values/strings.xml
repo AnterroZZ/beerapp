@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Twoje Piwo</string>
-    <string name="main_activity_button_text">Piwko wyjebane</string>
+    <string name="main_activity_button_text">Dodaj wypite piwo</string>
     <string name="main_drank_today">Wypite Dzisiaj:</string>
     <string name="main_drank_now">Ilość promili teraz:</string>
     <string name="profile_beer_progress">Postęp z piwami</string>
@@ -89,6 +89,7 @@
     <string name="daily_notification_title">Twoje piwo dnia to:</string>
     <string name="daily_notification_body">Już po 15, czas abys poznał swoje piwo dnia ;)</string>
     <string name="daily_notification_reminder">Od teraz będziesz otrzymywał powiadomienia o nowym dziennym piwie!</string>
+    <string name="profile_toolbar">Twój profil</string>
 
 
     <string-array name="amount_drank">

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
         android:elevation="4dp"
-        app:title="Your profile"
+        app:title="@string/profile_toolbar"
         app:titleTextColor="@color/colorSecondary" />
 
     <!--        Profile, followers,following following-->
@@ -24,12 +24,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:onClick="goToMain"
             android:id="@+id/profile_iv_profile_photo"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="16dp"
-            android:background="@drawable/image_placeholder" />
+            android:background="@drawable/ic_account_default" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

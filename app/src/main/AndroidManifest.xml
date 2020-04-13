@@ -32,7 +32,13 @@
                 android:value="com.example.twojepiwo.ProfileActivity" />
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.twojepiwo.MainActivity" />
+        </activity>
         <activity android:name=".LoginRegister.RegisterActivity" />
         <activity android:name=".LoginRegister.LoginActivity"></activity>
         <activity android:name=".LaunchingActivity">

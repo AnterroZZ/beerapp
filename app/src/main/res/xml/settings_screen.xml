@@ -35,9 +35,9 @@
         android:key="notifcations"
         android:title="@string/settings_notifications">
 
-        <SwitchPreference
-            android:key="all_notifications"
-            android:title="@string/settings_send_notifcations" />
+<!--        <SwitchPreference-->
+<!--            android:key="all_notifications"-->
+<!--            android:title="@string/settings_send_notifcations" />-->
         <SwitchPreference
             android:defaultValue="true"
             android:key="daily_notifications"

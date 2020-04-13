@@ -20,7 +20,7 @@ public class LaunchingActivity extends AppCompatActivity {
 
         if(isLoggedIn())
         {
-            launchingIntent = new Intent(LaunchingActivity.this, ProfileActivity.class);
+            launchingIntent = new Intent(LaunchingActivity.this, MainActivity.class);
             startActivity(launchingIntent);
             finish();
         }else
