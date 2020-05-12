@@ -87,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
                                                 if(task.isSuccessful())
                                                 {
                                                     //TODO: To remove later on
-                                                    Toast.makeText(getApplicationContext(),"Zarejestrowayn skurwiel!", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(getApplicationContext(),"Zarejestrowany!", Toast.LENGTH_SHORT).show();
                                                     finish();
                                                 }
                                             }
